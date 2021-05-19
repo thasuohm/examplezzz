@@ -56,6 +56,14 @@
 
 
 
+  <container>
+    <h1 class="text-3xl">Router</h1>
+   <h1 class="hover:border-black border"> <router-link to="/test">router</router-link></h1>
+    <router-view></router-view>
+  </container>
+
+
+
 
 </template>
 
