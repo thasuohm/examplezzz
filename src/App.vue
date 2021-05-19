@@ -1,5 +1,5 @@
 <template>
-  <container>
+  <container >
     <h1 class="text-3xl"> Class style binding</h1>
     <button @click="Hello = !Hello" class="border border-black bg-black text-white">CLICK HELLO</button>
 
@@ -63,16 +63,43 @@
   </container>
 
 
+  <container >
+    <base-card>
+    <template v-slot:header>
+    hellozz
+    </template>
+    <template v-slot:default>
+     Hi
+    </template>
+  
+  </base-card>
 
+  </container>
+
+
+  <container id="forTele">
+   <scope v-slot="slotGet">
+     {{ slotGet.scopeTest }}
+   </scope>
+
+  </container>
+
+<container>
+
+<teleportz></teleportz>
+
+</container>
 
 </template>
 
 <script>
 import Container from './components/Container.vue'
-
+import BaseCard from './components/BaseCard.vue'
+import Scope from './components/Scope.vue'
+import Teleportz from './components/Teleportz.vue'
 export default {
   name: 'App',
-  components: { Container },
+  components: { Container,BaseCard,Scope,Teleportz },
   data() {
     return {
 
@@ -90,6 +117,10 @@ export default {
       },
       checkbox : [],
       select : "",
+      user : {
+firstName : "bot", lastName : "GOGO"
+
+      }
     }
   },
 
