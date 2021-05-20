@@ -1,12 +1,12 @@
 <template>
   <container >
-    <h1 class="text-3xl"> Class style binding</h1>
+    <h1 class="text-3xl" :style="{color : 'green'}"> Class style binding</h1>
     <button @click="Hello = !Hello" class="border border-black bg-black text-white">CLICK HELLO</button>
 
     
     <h1 :class="{test: Hello}">HELLO1</h1>
 
-    <h1 :class="[{ test: Hello }, Hi, Ho]">hello</h1>
+    <h1 :class="[{ test: Hello }, Hi, Ho]" >hello</h1>
 
     <h1 :class="[Hello ? test : Hi, Ho]">helloTest</h1>
 
